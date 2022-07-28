@@ -23,7 +23,7 @@ public class WelcomeScreen extends AppCompatActivity {
 
         setContentView(R.layout.welcome_screen);
         // Program Start
-
+        // Version Control Lets See
         startBtn = (Button) findViewById(R.id.startBtn);
         startBtn.setOnClickListener(new View.OnClickListener(){
             @Override
