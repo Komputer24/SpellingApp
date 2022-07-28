@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgreen"
+    tools:context=".WelcomeScreen">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="309dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/the_spelling_quiz"
+        android:textColor="@color/lightred"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="103dp"
+
+        android:layout_marginTop="260dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:text="@string/welcome_to"
+        android:textColor="@color/lightred"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/appTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startBtn"
+        android:layout_width="142dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="393dp"
+        android:background="@color/lightgray"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/begin"
+        android:textAlignment="center"
+        android:textColor="@color/lightred"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:layout_constraintVertical_bias="0.047"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/settingBtn"
+        android:layout_width="85dp"
+        android:layout_height="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="settingClick"
+        android:layout_marginBottom="783dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/settingpic" />
+</RelativeLayout>

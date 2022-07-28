@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Spelling Quiz!</string>
+
+    <string name="welcome_to">Welcome To...</string>
+    <string name="the_spelling_quiz">The Spelling Quiz!</string>
+    <string name="begin">BEGIN</string>
+
+    <string name="a_picture_of_2_puppies">A picture of 2 puppies</string>
+    <string name="dog">Dog</string>
+    <string name="dug">Dug</string>
+    <string name="doj">Doj</string>
+    <string name="checkmark">A Checkmark</string>
+    <string name="wrongmark">An X mark</string>
+
+    <string name="a_picture_of_a_cat">A picture of a cat</string>
+    <string name="cap">Cap</string>
+    <string name="caf">Caf</string>
+    <string name="cat">Cat</string>
+
+    <string name="a_picture_of_a_fish">A picture of a fish</string>
+    <string name="fis">Fis</string>
+    <string name="fish">Fish</string>
+    <string name="fich">Fich</string>
+
+    <string name="complete">Complete!</string>
+    <string name="try_again">Try Again?</string>
+    <string name="restart">Restart</string>
+    <string name="leaveBtn">EXIT</string>
+</resources>
