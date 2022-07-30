@@ -34,7 +34,7 @@ public class WelcomeScreen extends AppCompatActivity {
 
     }
     public void openActivity(){
-        Intent intent = new Intent(this, firstQuestion.class);
+        Intent intent = new Intent(this, questions.class);
         startActivity(intent);
     }
     public void openSettings(){
@@ -45,6 +45,6 @@ public class WelcomeScreen extends AppCompatActivity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.aaed.org"));
         startActivity(browserIntent);
     } public void settingClick(View v) {
-        openSettings();
+        //openSettings();
     }
 }

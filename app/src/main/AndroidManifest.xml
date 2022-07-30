@@ -20,9 +20,6 @@
             android:name="com.spellingquizv1.myapplication.EndScreen"
             android:exported="false" />
         <activity
-            android:name="com.spellingquizv1.myapplication.thirdQuestion"
-            android:exported="false" />
-        <activity
             android:name="com.spellingquizv1.myapplication.WelcomeScreen"
             android:exported="true">
             <intent-filter>
@@ -32,10 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.spellingquizv1.myapplication.secondQuestion"
-            android:exported="false" />
-        <activity
-            android:name="com.spellingquizv1.myapplication.firstQuestion"
+            android:name="com.spellingquizv1.myapplication.questions"
             android:exported="true" />
     </application>
 

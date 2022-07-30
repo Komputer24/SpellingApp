@@ -5,79 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightgreen"
-    tools:context=".secondQuestion">
+    tools:context=".questions">
 
     <ImageView
-        android:id="@+id/catPic"
+        android:id="@+id/questionPic"
         android:layout_width="match_parent"
-        android:layout_height="278dp"
+        android:layout_height="310dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="-2dp"
-        android:contentDescription="@string/a_picture_of_a_cat"
-        app:layout_constraintBottom_toTopOf="@+id/catOpt1"
+        android:layout_marginTop="-1dp"
+        android:contentDescription="@string/a_picture_of_2_puppies"
+        app:layout_constraintBottom_toTopOf="@+id/firstOption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.536"
-        tools:srcCompat="@drawable/catpic" />
+        tools:srcCompat="@drawable/dogpic" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/catOpt1"
+        android:id="@+id/secondOption"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="464dp"
         android:background="@color/lightgray"
-        android:text="@string/cap"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/dug"
         android:textColor="@color/lightred"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center_horizontal|center_vertical"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/catOpt2"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="464dp"
-        android:text="@string/caf"
-        android:textSize="20sp"
-        android:gravity="center_horizontal|center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/lightgray"
-        android:textColor="@color/lightred"
-        android:textStyle="bold"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/catOpt3"
+        android:id="@+id/thirdOption"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_marginTop="564dp"
-        android:text="@string/cat"
+        android:background="@color/lightgray"
         android:gravity="center_horizontal|center_vertical"
+        android:text="@string/doj"
+        android:textColor="@color/lightred"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/firstOption"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="364dp"
         android:background="@color/lightgray"
+        android:gravity="center_horizontal|center_vertical"
         android:textColor="@color/lightred"
-        android:textStyle="bold"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/checkmark2"
-        android:layout_width="126dp"
-        android:layout_height="274dp"
+        android:id="@+id/checkmark"
+        android:layout_width="138dp"
+        android:layout_height="310dp"
         android:layout_alignParentTop="true"
 
         android:layout_centerInParent="true"
@@ -85,13 +82,12 @@
         android:contentDescription="@string/checkmark"
         android:gravity="center_vertical"
         android:visibility="invisible"
-        app:srcCompat="@drawable/greencheck"
-        tools:visibility="invisible" />
+        app:srcCompat="@drawable/greencheck" />
 
     <ImageView
-        android:id="@+id/wrongmark2"
-        android:layout_width="134dp"
-        android:layout_height="273dp"
+        android:id="@+id/wrongmark"
+        android:layout_width="138dp"
+        android:layout_height="310dp"
         android:layout_alignParentTop="true"
 
         android:layout_centerInParent="true"
@@ -99,7 +95,6 @@
         android:contentDescription="@string/wrongmark"
         android:gravity="center_vertical"
         android:visibility="invisible"
-        app:srcCompat="@drawable/wrongmark"
-        tools:visibility="invisible" />
+        app:srcCompat="@drawable/wrongmark" />
 
 </RelativeLayout>

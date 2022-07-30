@@ -22,7 +22,7 @@ public class EndScreen extends AppCompatActivity {
         leaveBtn = (Button) findViewById(R.id.leaveBtn);
 
         TextView textView = (TextView) findViewById(R.id.userScore);
-        textView.setText(String.valueOf(firstQuestion.score));
+        textView.setText(String.valueOf(questions.score));
 
         restartBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -35,7 +35,7 @@ public class EndScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finishAffinity();
-                firstQuestion.score = 0;
+                questions.score = 0;
             }
         });
 
@@ -44,6 +44,6 @@ public class EndScreen extends AppCompatActivity {
     public void openActivity(){
         Intent intent = new Intent(this, WelcomeScreen.class);
         startActivity(intent);
-        firstQuestion.score = 0;
+        questions.score = 0;
     }
 }
