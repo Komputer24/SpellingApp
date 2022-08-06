@@ -21,8 +21,11 @@ public class EndScreen extends AppCompatActivity {
         restartBtn = (Button) findViewById(R.id.restartBtn);
         leaveBtn = (Button) findViewById(R.id.leaveBtn);
 
-        TextView textView = (TextView) findViewById(R.id.userScore);
-        textView.setText(String.valueOf(questions.score));
+        TextView userScore = (TextView) findViewById(R.id.userScore);
+        TextView userQNum = (TextView) findViewById((R.id.userQNum));
+
+        userScore.setText(String.valueOf(questions.score));
+        userQNum.setText(String.valueOf(questions.FOCUSED_STATE_SET.length));
 
         restartBtn.setOnClickListener(new View.OnClickListener(){
             @Override

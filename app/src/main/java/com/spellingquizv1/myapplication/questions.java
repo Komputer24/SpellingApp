@@ -15,8 +15,20 @@ import java.util.Random;
 
 public class questions extends AppCompatActivity {
     private Button button;
-
     public static Integer score = 0;
+
+    public class Questions{
+        private String opt1;
+        private String opt2;
+        private String opt3;
+        private int qImg;
+        public Questions(String opt1, String opt2, String opt3, int qImg){
+            this.opt1 = opt1;
+            this.opt2 = opt2;
+            this.opt3 = opt3;
+            this.qImg = qImg;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +36,7 @@ public class questions extends AppCompatActivity {
         setContentView(R.layout.questions);
         // Program Start
 
-        ImageView myImageView = (ImageView) findViewById(R.id.questionPic);
-        myImageView.setImageResource(R.drawable.dogpic);
+        ImageView qImage = (ImageView) findViewById(R.id.questionPic);
 
         ImageView checkMark = (ImageView) findViewById(R.id.checkmark);
         ImageView wrongMark = (ImageView) findViewById(R.id.wrongmark);
@@ -37,10 +48,26 @@ public class questions extends AppCompatActivity {
         Button option2 = (Button) findViewById(R.id.secondOption);
         Button option3 = (Button) findViewById(R.id.thirdOption);
 
-        String optionArr[] = {"Dog", "Dug", "Doj"};
+        // Dynamics Start
+
+        Questions questions[] = new Questions[10];
+        questions[0] = new Questions("Dog", "Dug", "Doj", R.drawable.dogpic);
+        String optionArr[] = {"Option 1", "Option 2", "Option 3"};
+        /*
+        for(int i = 0; i <= 2; i++){
+            x = "opt"+i;
+            optionArr[i] = questions[0].opt+i;
+        }
+        */
+        optionArr[0] = questions[0].opt1;
+        optionArr[1] = questions[0].opt2;
+        optionArr[2] = questions[0].opt3;
+
+        qImage.setImageResource(questions[0].qImg);
+
+        //END
 
         Random rand = new Random();
-
         for (int i = 0; i < optionArr.length; i++) {
             int randomIndexToSwap = rand.nextInt(optionArr.length);
             String temp = optionArr[randomIndexToSwap];
@@ -48,7 +75,6 @@ public class questions extends AppCompatActivity {
             optionArr[i] = temp;
         }
 
-        //randomize(optionArr, optionArr.length);
         option1.setText(optionArr[0]);
         option2.setText(optionArr[1]);
         option3.setText(optionArr[2]);

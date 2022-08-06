@@ -45,6 +45,6 @@ public class WelcomeScreen extends AppCompatActivity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.aaed.org"));
         startActivity(browserIntent);
     } public void settingClick(View v) {
-        //openSettings();
+        openSettings();
     }
 }
