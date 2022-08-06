@@ -22,11 +22,13 @@ public class questions extends AppCompatActivity {
         private String opt2;
         private String opt3;
         private int qImg;
-        public Questions(String opt1, String opt2, String opt3, int qImg){
+        private String correct;
+        public Questions(String opt1, String opt2, String opt3, int qImg, String correct){
             this.opt1 = opt1;
             this.opt2 = opt2;
             this.opt3 = opt3;
             this.qImg = qImg;
+            this.correct = correct;
         }
     }
 
@@ -51,7 +53,7 @@ public class questions extends AppCompatActivity {
         // Dynamics Start
 
         Questions questions[] = new Questions[10];
-        questions[0] = new Questions("Dog", "Dug", "Doj", R.drawable.dogpic);
+        questions[0] = new Questions("Dog", "Dug", "Doj", R.drawable.dogpic, "Dog");
         String optionArr[] = {"Option 1", "Option 2", "Option 3"};
         /*
         for(int i = 0; i <= 2; i++){
@@ -82,7 +84,7 @@ public class questions extends AppCompatActivity {
         option1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if (optionArr[0] == "Dog"){
+                if (optionArr[0] == questions[0].correct){
                     correctSfx.start();
                     checkMark.setVisibility(View.VISIBLE);
                     score++;
@@ -111,7 +113,7 @@ public class questions extends AppCompatActivity {
         option2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if (optionArr[1] == "Dog"){
+                if (optionArr[1] == questions[0].correct){
                     correctSfx.start();
                     checkMark.setVisibility(View.VISIBLE);
                     score++;
@@ -140,7 +142,7 @@ public class questions extends AppCompatActivity {
         option3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if (optionArr[2] == "Dog"){
+                if (optionArr[2] == questions[0].correct){
                     correctSfx.start();
                     checkMark.setVisibility(View.VISIBLE);
                     score++;
