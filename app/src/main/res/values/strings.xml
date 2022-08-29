@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Spelling Quiz!</string>
-
+    <string name="privacy_policy"><a href="https://www.privacypolicies.com/live/71a2c7ff-4968-4709-861d-ef746da1566a
+">Privacy Policy</a></string>
     <string name="welcome_to">Welcome To...</string>
     <string name="the_spelling_quiz">The Spelling Quiz!</string>
     <string name="begin">BEGIN</string>

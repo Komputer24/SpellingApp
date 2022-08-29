@@ -1,3 +1,4 @@
+
 package com.spellingquizv1.myapplication;
 
 import android.content.Intent;
@@ -25,7 +26,7 @@ public class EndScreen extends AppCompatActivity {
         TextView userQNum = (TextView) findViewById((R.id.userQNum));
 
         userScore.setText(String.valueOf(questions.score));
-        userQNum.setText(String.valueOf(questions.FOCUSED_STATE_SET.length));
+        userQNum.setText(String.valueOf(questions.qsLength));
 
         restartBtn.setOnClickListener(new View.OnClickListener(){
             @Override
