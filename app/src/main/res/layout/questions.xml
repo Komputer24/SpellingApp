@@ -4,16 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgreen"
+    android:background="@drawable/chalkbg"
     tools:context=".questions">
+
+    <TextView
+        android:id="@+id/picQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:text="What is this?"
+        android:textColor="@color/lightred"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/appTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/questionPic"
-        android:layout_width="match_parent"
-        android:layout_height="310dp"
+        android:layout_width="329dp"
+        android:layout_height="259dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="-1dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="89dp"
         android:contentDescription="@string/a_picture_of_2_puppies"
         app:layout_constraintBottom_toTopOf="@+id/firstOption"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +44,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.536"
         tools:srcCompat="@drawable/dogpic" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/firstOption"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="364dp"
+        android:background="@color/lightgray"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/dog"
+        android:textColor="@color/lightred"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/secondOption"
@@ -56,30 +94,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/firstOption"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="364dp"
-        android:background="@color/lightgray"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/dog"
-        android:textColor="@color/lightred"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/checkmark"
-        android:layout_width="138dp"
-        android:layout_height="310dp"
+        android:layout_width="131dp"
+        android:layout_height="255dp"
         android:layout_alignParentTop="true"
 
         android:layout_centerInParent="true"
-        android:layout_marginTop="-1dp"
+        android:layout_marginTop="91dp"
         android:contentDescription="@string/checkmark"
         android:gravity="center_vertical"
         android:visibility="invisible"
@@ -87,12 +109,12 @@
 
     <ImageView
         android:id="@+id/wrongmark"
-        android:layout_width="138dp"
-        android:layout_height="310dp"
+        android:layout_width="141dp"
+        android:layout_height="252dp"
         android:layout_alignParentTop="true"
 
         android:layout_centerInParent="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="94dp"
         android:contentDescription="@string/wrongmark"
         android:gravity="center_vertical"
         android:visibility="invisible"

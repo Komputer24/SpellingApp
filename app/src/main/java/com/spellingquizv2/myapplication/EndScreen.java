@@ -1,5 +1,5 @@
 
-package com.spellingquizv1.myapplication;
+package com.spellingquizv2.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -6,11 +6,11 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.spellingquizv1.myapplication"
+        applicationId "com.spellingquizv2.myapplication"
         minSdk 21
         targetSdk 32
-        versionCode 5
-        versionName "1.5"
+        versionCode 8
+        versionName "1.8"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

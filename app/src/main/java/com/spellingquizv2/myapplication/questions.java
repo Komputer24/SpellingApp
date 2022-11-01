@@ -1,4 +1,4 @@
-package com.spellingquizv1.myapplication;
+package com.spellingquizv2.myapplication;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -21,20 +21,20 @@ public class questions extends AppCompatActivity {
     public ImageView qImage;
     public MediaPlayer correctSfx;
     public MediaPlayer wrongSfx;
-    public Questions questions[] = new Questions[10];
+    public QuestionsAll questions[] = new QuestionsAll[3];
 
     public Button option1;
     public Button option2;
     public Button option3;
     public String optionArr[] = {"Option 1", "Option 2", "Option 3"};
 
-    public static class Questions{
+    public static class QuestionsAll {
         private String opt1;
         private String opt2;
         private String opt3;
         private int qImg;
         private String correct;
-        public Questions(String opt1, String opt2, String opt3, int qImg, String correct){
+        public QuestionsAll(String opt1, String opt2, String opt3, int qImg, String correct){
             this.opt1 = opt1;
             this.opt2 = opt2;
             this.opt3 = opt3;
@@ -51,7 +51,6 @@ public class questions extends AppCompatActivity {
         qsLength = questions.length;
         qImage = (ImageView) findViewById(R.id.questionPic);
 
-
         ImageView checkMark = (ImageView) findViewById(R.id.checkmark);
         ImageView wrongMark = (ImageView) findViewById(R.id.wrongmark);
 
@@ -67,16 +66,9 @@ public class questions extends AppCompatActivity {
         questions[1] = new Questions("Cab", "Cat", "Cap", R.drawable.catpic, "Cat");
         questions[2] = new Questions("Fist", "Fash", "Fish", R.drawable.fishpic, "Fish");
         */
-        questions[0] = new Questions("About", "Abot", "Adout", R.drawable.qmark, "About");
-        questions[1] = new Questions("Afraid", "Araid", "Ofraid", R.drawable.qmark, "Afraid");
-        questions[2] = new Questions("After", "Aftur", "Affter", R.drawable.qmark, "After");
-        questions[3] = new Questions("Again", "Agan", "Agaiyn", R.drawable.qmark, "Again");
-        questions[4] = new Questions("All", "Al", "Ali", R.drawable.qmark, "All");
-        questions[5] = new Questions("Always", "Alwuys", "Alwy", R.drawable.qmark, "Always");
-        questions[6] = new Questions("Am", "Aum", "Arm", R.drawable.qmark, "Am");
-        questions[7] = new Questions("An", "Ann", "Ang", R.drawable.qmark, "An");
-        questions[8] = new Questions("And", "Ang", "Ane", R.drawable.qmark, "And");
-        questions[9] = new Questions("Any", "Eny", "Ane", R.drawable.qmark, "Any");
+        questions[0] = new QuestionsAll("Dog", "Dag", "Doug", R.drawable.dogpic, "Dog");
+        questions[1] = new QuestionsAll("Crat", "Cat", "Cut", R.drawable.catpic, "Cat");
+        questions[2] = new QuestionsAll("Fosh", "Fesh", "Fish", R.drawable.fishpic, "Fish");
         // Dynamics Start
         nextIteration();
 
@@ -191,7 +183,9 @@ public class questions extends AppCompatActivity {
     private void nextIteration(){
         qLoop++;
         if(qLoop == questions.length){
-            openActivity();
+            //openActivity();
+            Intent intent = new Intent(this, EndScreen.class);
+            startActivity(intent);
         }else {
         /*
         Questions questions[] = new Questions[3];
@@ -232,9 +226,9 @@ public class questions extends AppCompatActivity {
         }
     }
 
-    public void openActivity(){
+    /*public void openActivity(){
         Intent intent = new Intent(this, EndScreen.class);
         startActivity(intent);
-    }
+    }*/
 
 }

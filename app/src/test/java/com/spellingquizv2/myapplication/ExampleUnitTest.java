@@ -1,4 +1,4 @@
-package com.spellingquizv1.myapplication;
+package com.spellingquizv2.myapplication;
 
 import org.junit.Test;
 
